@@ -24,7 +24,9 @@ namespace RajviBooks.DataAccess.Repository
             if (objFromDb != null)
             {
                 objFromDb.Name = coverType.Name;
+                _db.SaveChanges();
             }
         }
     }
 }
+
