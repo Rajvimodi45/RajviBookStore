@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace RajviBooks.DataAccess.Repository
 {
-    public class UnitOfWork
+    public class UnitOfWork : IUnitOfWork
     {
         private readonly ApplicationDbContext _db;
 
@@ -27,7 +27,7 @@ namespace RajviBooks.DataAccess.Repository
             _db.Dispose();
         }
 
-        public void save()
+        public void Save()
         {
             _db.SaveChanges();
         }
